@@ -10,6 +10,10 @@ The main goal of this project was to build an accurate and well-balanced medical
 
 After multiple rounds of tuning, the final model achieves **~95.5% test accuracy** with a **balanced confusion matrix** across all three classes.
 
+📄 **Project Report:** 
+https://drive.google.com/file/d/1iUI-GHdQI4Hr5oYi3GQgyg0UGR3ffXc_/view?usp=sharing
+
+
 ---
 
 ## Why this project?
