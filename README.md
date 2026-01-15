@@ -1,4 +1,4 @@
-# Chest X-ray Classification using CNN
+# Chest X-ray Classification using CNN Model
 
 This project is a Convolutional Neural Network (CNN)–based system built to classify chest X-ray images into three categories:
 
