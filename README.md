@@ -16,7 +16,7 @@ To develop a CNN-based model that can reliably classify chest X-ray images while
 
 ## 🗂️ Dataset
 - Multi-class chest X-ray dataset from Kaggle  
-- Classes: * Normal, Pneumonia, COVID-19*  
+- Classes: Normal, Pneumonia, COVID-19 
 
 ### Preprocessing Steps
 - Image resizing  
