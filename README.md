@@ -1,66 +1,84 @@
-# Chest X-ray Classification using CNN Model
+# 🫁 Chest X-ray Classification using CNN
 
-This project is a Convolutional Neural Network (CNN)–based system built to classify chest X-ray images into three categories:
+A deep learning project focused on classifying chest X-ray images into multiple categories using Convolutional Neural Networks (CNNs), with an emphasis on model performance, robustness, and real-world applicability.
 
-- **COVID-19**
-- **Normal**
-- **Pneumonia**
+---
 
-The main goal of this project was to build an accurate and well-balanced medical image classifier **using a custom CNN**, while keeping training efficient on a **CPU-only setup**.
+## 📌 Problem
+Manual analysis of chest X-rays is time-consuming and requires expertise. This project aims to assist in automated diagnosis by building a model that can accurately classify X-ray images.
 
-After multiple rounds of tuning, the final model achieves **~95.5% test accuracy** with a **balanced confusion matrix** across all three classes.
+---
 
-📄 **Project Report:** 
-https://drive.google.com/file/d/1iUI-GHdQI4Hr5oYi3GQgyg0UGR3ffXc_/view?usp=sharing
+## 🎯 Objective
+To develop a CNN-based model that can reliably classify chest X-ray images while maintaining strong generalization across unseen data.
+
+---
+
+## 🗂️ Dataset
+- Multi-class chest X-ray dataset from Kaggle  
+- Classes: * Normal, Pneumonia, COVID-19*  
+
+### Preprocessing Steps
+- Image resizing  
+- Normalization  
+- Data augmentation (rotation, flipping, etc.)  
+
+---
+
+## 🧠 Model Architecture
+- Convolutional layers with ReLU activation  
+- MaxPooling layers for spatial reduction  
+- Fully connected dense layers  
+- Dropout for regularization  
+
+<img width="476" height="272" alt="image" src="https://github.com/user-attachments/assets/ba5ea820-b975-40dd-9e55-2d193b8ad621" />
 
 
 ---
 
-## Why this project?
-
-Chest X-ray analysis is an important problem in medical imaging, especially for respiratory diseases where visual patterns often overlap.  
-This project focuses not just on accuracy, but also on **class balance and generalization**, which are critical in real-world medical applications.
-
----
-
-## Key Features
-
-- Custom CNN architecture (built from scratch)
-- Offline balanced data augmentation
-- Class-weighted loss to handle imbalance
-- Label smoothing to improve generalization
-- Early stopping and learning-rate scheduling
-- Confusion matrix and performance visualization
-- Single-image prediction support
-- Optimized for CPU-based training
+## ⚙️ Training Details
+- Loss Function: Categorical Crossentropy  
+- Optimizer: Adam  
+- Evaluation: Accuracy + Cross-validation  
 
 ---
 
-## Model Overview
+## 📊 Results
 
-- **Input size:** 48 × 48 RGB chest X-ray images  
-- **Architecture:** Convolution → Pooling → Dense layers  
-- **Activation:** ReLU (hidden layers), Softmax (output)  
-- **Loss function:** Categorical Cross-Entropy with label smoothing  
-
-The model was iteratively tuned to reduce overfitting and improve separation between visually similar classes such as Normal and Pneumonia.
+- ✅ Test Accuracy: **95.5%**  
+- ✅ Cross-validation Accuracy: **~94% (5-fold)**  
 
 ---
 
-## Results
+### 📉 Confusion Matrix
+<img width="572" height="458" alt="image" src="https://github.com/user-attachments/assets/d4490ff3-9f8c-4453-a92e-c298c72debd7" />
 
-- **Test Accuracy:** ~95.5%
-- **Balanced recall** across COVID, Normal, and Pneumonia classes
-- **Training time:** ~6 minutes on CPU
-- Stable training and validation curves (no overfitting)
 
 ---
 
-## Future Improvements
+### 📈 Training Performance
+<img width="912" height="370" alt="image" src="https://github.com/user-attachments/assets/3ceba0f1-724c-460c-a0fb-a90638e5361a" />
 
-- Training with higher-resolution images
-- Transfer learning using pretrained models
-- Grad-CAM visualizations for model interpretability
-- Deployment as a web or desktop application
 
 ---
+
+
+## 🔎 Key Insights
+- The model generalizes well across classes  
+- Data augmentation significantly improved performance  
+- Minor misclassifications occur in visually similar cases  
+
+---
+
+## 🚀 Future Improvements
+- Implement transfer learning (ResNet, EfficientNet)  
+- Add explainability using Grad-CAM  
+- Deploy as a web-based diagnostic tool  
+
+---
+
+## ▶️ How to Run
+
+```bash
+pip install -r requirements.txt
+python train.py
